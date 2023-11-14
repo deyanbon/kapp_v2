@@ -1,0 +1,25 @@
+server:
+  port : 8080
+
+spring:
+  application:
+    name: kapp
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: TRACE
+
+kapp:
+  secret1: ${SECRET1}
